@@ -39,11 +39,11 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <div className="min-h-screen text-theme antialiased">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden text-theme antialiased">
       <MeshBackground />
       <Header active={active} onNavigate={navigate} />
 
-      <main>
+      <main className="w-full max-w-full overflow-x-clip">
         <HeroSection onNavigate={navigate} />
         <SectionDivider />
 

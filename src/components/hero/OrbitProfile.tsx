@@ -53,7 +53,7 @@ export function OrbitProfile() {
 
   return (
     <motion.div
-      className="relative mx-auto w-[min(100%,340px)] aspect-square sm:w-[380px] md:w-[420px]"
+      className="relative mx-auto w-full max-w-[340px] aspect-square sm:max-w-[380px] md:max-w-[420px] overflow-hidden"
       initial={{ opacity: 0, scale: 0.92 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
@@ -83,10 +83,10 @@ export function OrbitProfile() {
         size="sm"
       />
 
-      {/* Mobile: single ring with all keywords */}
+      {/* Mobile: single ring — radius kept inside container */}
       <OrbitRing
         items={ORBIT_KEYWORDS}
-        radius={130}
+        radius={92}
         ringClass="orbit-ring sm:hidden"
         labelClass="orbit-label sm:hidden"
         size="sm"

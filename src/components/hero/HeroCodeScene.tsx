@@ -11,7 +11,7 @@ const CODE_LINES = [
 
 export function HeroCodeScene() {
   return (
-    <div className="relative w-full max-w-md mx-auto lg:mx-0">
+    <div className="relative w-full max-w-md mx-auto lg:mx-0 overflow-hidden px-1">
       <div className="absolute -inset-4 bg-gradient-to-r from-sky-500/20 via-violet-500/10 to-cyan-500/20 rounded-3xl blur-2xl opacity-60" />
 
       <motion.div
@@ -69,7 +69,7 @@ export function HeroCodeScene() {
 
       {/* API flow mini animation */}
       <motion.div
-        className="absolute -bottom-6 -left-4 glass rounded-xl px-3 py-2 flex items-center gap-2 text-xs"
+        className="absolute -bottom-4 left-0 sm:-bottom-6 sm:-left-4 glass rounded-xl px-3 py-2 flex items-center gap-2 text-xs max-w-[calc(100%-1rem)]"
         animate={{ y: [0, -6, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
       >
@@ -88,7 +88,7 @@ export function HeroCodeScene() {
       </motion.div>
 
       <motion.div
-        className="absolute -top-4 -right-2 glass rounded-xl p-2.5"
+        className="absolute -top-2 right-0 sm:-top-4 sm:-right-2 glass rounded-xl p-2.5"
         animate={{ y: [-8, 8, -8], rotate: [0, 3, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
       >

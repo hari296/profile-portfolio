@@ -111,7 +111,7 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
             </motion.div>
 
             <motion.div
-              className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted"
+              className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted min-w-0"
               variants={fadeUp}
               initial="hidden"
               animate="visible"
@@ -122,7 +122,7 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
               </span>
               <a
                 href={`mailto:${CONTACT.email}`}
-                className="flex items-center gap-2 hover:text-sky-600 dark:hover:text-sky-300 transition-colors"
+                className="flex items-center gap-2 hover:text-sky-600 dark:hover:text-sky-300 transition-colors break-all min-w-0"
               >
                 <FaEnvelope className="text-sky-500" /> {CONTACT.email}
               </a>
@@ -138,7 +138,7 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
           </div>
 
           {/* Visual: orbit + code */}
-          <div className="order-2 flex flex-col items-center gap-8 lg:gap-6">
+          <div className="order-2 flex flex-col items-center gap-8 lg:gap-6 w-full max-w-full overflow-hidden">
             <OrbitProfile />
             <motion.div
               className="w-full max-w-md"

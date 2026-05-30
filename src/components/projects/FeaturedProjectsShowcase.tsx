@@ -97,7 +97,7 @@ export function FeaturedProjectsShowcase() {
 
   return (
     <div
-      className="container-main w-full py-4"
+      className="container-main w-full py-4 overflow-x-clip"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}
@@ -148,7 +148,7 @@ export function FeaturedProjectsShowcase() {
           </AnimatePresence>
         </div>
 
-        <div className="relative w-full">
+        <div className="relative w-full overflow-x-clip">
           <div
             className={`absolute -inset-4 md:-inset-6 rounded-3xl bg-gradient-to-br ${activeProject.accent} blur-3xl opacity-60 pointer-events-none transition-all duration-700`}
             aria-hidden
